@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Logo Details</title>
+	<style>
+		:root {
+      --primary-color: #2c3e50;
+      --accent-color: #3498db;
+      --bg-light: #f4f6f8;
+      --text-dark: #333;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color:  #fff0f5;
+      color: var(--text-dark);
+      line-height: 1.6;
+    }
+
+    /* Header */
+    .site-header {
+      background: #fff;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      padding: 15px 30px;
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .logo img {
+      width: 80px;
+      height: 80px;
+    }
+
+    .nav-list {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-list li a {
+      text-decoration: none;
+      color: var(--primary-color);
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .nav-list li a:hover {
+      color: var(--accent-color);
+    }
+		
+
+		h1 {
+			margin-top: 30px;
+			font-size: 2.5rem;
+			color: #2c3e50;
+		}
+
+		.logo-container {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			gap: 30px;
+			padding: 40px 20px;
+		}
+
+		.logo {
+			background: #fff;
+			border-radius: 12px;
+			padding: 15px;
+			box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+			transition: transform 0.3s ease, box-shadow 0.3s ease;
+		}
+
+		.logo img {
+	    width: 180px; /* wider */
+	    height: 35px; /* shorter */
+	    object-fit: contain; /* ensures image scales nicely */
+}
+
+		.logo:hover {
+			transform: scale(1.05);
+			box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+		}
+
+		@media (max-width: 600px) {
+			.logo img {
+				width: 80px;
+				height: 80px;
+			}
+
+			h1 {
+				font-size: 2rem;
+			}
+
+			.logo-container {
+				gap: 20px;
+				padding: 20px 10px;
+			}
+		}
+	</style>
+</head>
+<body>
+
+
+	 <header class="site-header">
+    <div class="container header-inner">
+      <div class="logoimp"> <img src="./image/logo.png" width="80px" height="80px"></div>
+     
+      <nav>
+        <ul class="nav-list">
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="#about">ABOUT US</a></li>
+          <li><a href="#virtual">VIRTUAL CONFERENCE</a></li>
+          <li><a href="#service">SERVICE</a></li>
+          <li><a href="#gallery">GALLERY</a></li>
+          <li><a href="#contact">CONTACT US</a></li>
+           <li><a href="logo.html">OUR WORK </a></li>
+          
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+
+	<h1></h1>
+
+	<div class="logo-container">
+	<div class="logo">
+		<a href="https://example.com/logo1" target="_blank">
+			<img src="./image/assets11.PNG" alt="Logo 1">
+		</a>
+	</div>
+	
+	<div class="logo">
+		<a href="CAHOCON.html" target="_blank">
+			<img src="./image/CAHOCONBlack1.PNG" alt="Logo 2">
+		</a>
+	</div>
+	
+	<div class="logo">
+		<a href="https://example.com/logo3" target="_blank">
+			<img src="./image/EF1.PNG" alt="Logo 3">
+		</a>
+	</div>
+</div>
+
+</body>
+</html>
