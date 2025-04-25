@@ -129,11 +129,17 @@
 
     }
 
-    .video-wrapper {
+    /*.video-wrapper {
       flex: 1;
       position: relative;
       max-width: 50%;
-    }
+    }*/
+    .video-wrapper {
+  flex: 1;
+  position: relative;
+  width: 100%;
+  max-width: 700px;
+}
 
     .video-wrapper video {
       width: 100%;
@@ -310,6 +316,19 @@
       }
     }
 
+.responsive-text-section {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.responsive-inner-text {
+  width: 100%;
+  max-width: 700px;
+  text-align: center;
+  padding: 0 15px;
+}
 
 
   </style>
@@ -343,7 +362,19 @@
 </div>
 
 <div class="video-container">
-  <div class="video-wrapper" onclick="document.getElementById('promoVideo').play(); this.querySelector('.play-button').style.display='none';">
+  <!-- <div class="video-wrapper" onclick="document.getElementById('promoVideo').play(); this.querySelector('.play-button').style.display='none';"> -->
+    <div class="video-wrapper" onclick="
+  const video = document.getElementById('promoVideo');
+  const playButton = this.querySelector('.play-button');
+  if (video.paused) {
+    video.play();
+    playButton.style.display = 'none';
+  } else {
+    video.pause();
+    playButton.style.display = 'flex';
+  }
+">
+
     <video id="promoVideo"  poster="./image/video-thumbnail.jpg">
       <source src="./video/video.mp4" type="video/mp4">
       Your browser does not support the video tag.
@@ -351,8 +382,10 @@
     <div class="play-button"></div>
   </div>
 </div>
- <div style=" padding: 10px; display: flex; align-items: center; justify-content: center;">
-  <div style="width: 50%; text-align: center;">
+ <!-- <div style=" padding: 10px; display: flex; align-items: center; justify-content: center;">
+  <div style="width: 50%; text-align: center;"> -->
+    <div class="responsive-text-section">
+  <div class="responsive-inner-text">
     <p>
       CAHOCON 2025 is set to be a landmark international conclave, hosted by the Consortium of Accredited Healthcare Organizations (CAHO) and endorsed by respected bodies such as ISQua, ASQua, and QCI.
       Themed <strong>"Enhancing Quality through Collaboration: Transforming Healthcare Together"</strong>, this year's event will spotlight the pivotal role of collaboration in driving progress across the healthcare landscape.
