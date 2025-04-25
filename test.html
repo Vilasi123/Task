@@ -16,6 +16,7 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+      color: #9F509D;
     }
 
     body, html {
@@ -123,7 +124,9 @@
       gap: 20px;
       align-items: center;
       justify-content: center;
-      padding: 20px;
+      padding: 5px;
+
+
     }
 
     .video-wrapper {
@@ -136,6 +139,8 @@
       width: 100%;
       border-radius: 8px;
       display: block;
+      border: 1px solid #ffffff !important;
+      background-color: #ffffff !important;
     }
 
     .play-button {
@@ -164,18 +169,21 @@
       height: 30px;
     }
 
-    .video-text {
+    /*.video-text {
       flex: 1;
       min-width: 250px;
       padding: 10px;
       /*background-color: #f9f9f9;*/
-      border-radius: 8px;
+      /*border-radius: 8px;
       max-width: 50%;
       font-family: Inter;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-    }
+      margin-top: 20px;
+      text-align: center;*/
+    */
+
 
     .button-container {
       display: flex;
@@ -198,10 +206,7 @@
       background-color: #007BFF;
       color: white;
     }
-    .video-wrapper{
-        border: 1px solid white !important;
-        background-color:white !important;
-      }
+
 
     @media (max-width: 768px) {
       .video-container {
@@ -214,18 +219,15 @@
         max-width: 100%;
       }
 
-      .video-text {
-        margin-top: 20px;
-      }
     }
 
     .deliverables-section {
       background: #92599F;
       padding: 40px 20px;
-      border-radius: 25px;
-      color: white;
+      border-radius: 25px;      
       max-width: 1000px;
       margin: 40px auto;
+      color: white;
     }
 
     .deliverables-container {
@@ -233,6 +235,7 @@
       flex-wrap: wrap;
       justify-content: center;
       gap: 20px;
+       color: white;
     }
 
     .card {
@@ -306,6 +309,9 @@
         max-width: 300px;
       }
     }
+
+
+
   </style>
 </head>
 
@@ -332,7 +338,7 @@
 
 <div class="container">
   <img src="./image/CAHOCONBlack1.png" alt="Conference Logo">
-  <h1>Enhancing Quality through Collaboration:</h1><h2> Transforming Healthcare Together</h2>
+  <h1 >Enhancing Quality through Collaboration:</h1><h3> Transforming Healthcare Together</h3>
   <p class="para">11th, 12th-13th April, 2025 Hotel Pullman Aerocity New Delhi</p>
 </div>
 
@@ -344,15 +350,16 @@
     </video>
     <div class="play-button"></div>
   </div>
-
-  <div class="video-text">
+</div>
+ <div style=" height: vh; display: flex; align-items: center; justify-content: center;">
+  <div style="width: 50%; text-align: center;">
     <p>
       CAHOCON 2025 is set to be a landmark international conclave, hosted by the Consortium of Accredited Healthcare Organizations (CAHO) and endorsed by respected bodies such as ISQua, ASQua, and QCI.
       Themed <strong>"Enhancing Quality through Collaboration: Transforming Healthcare Together"</strong>, this year's event will spotlight the pivotal role of collaboration in driving progress across the healthcare landscape.
       The tagline, <em>"Collaboration: The heartbeat of progress"</em>, encapsulates the spirit of the event.
     </p>
     <br>
-    <p>
+    <p style="margin-bottom: 30px;">
       Taking place on the <strong>12th and 13th of April 2025</strong> at the luxurious Hotel Pullman, Aerocity, New Delhi, the event will bring together distinguished healthcare leaders, professionals, researchers, and educators.
     </p>
 
@@ -362,8 +369,10 @@
   </div>
 </div>
 
+
+
 <section class="deliverables-section">
-  <h2 style="text-align:center ; margin-bottom: 30px">Our Deliverables</h2>
+  <h2 style="text-align:center ; color : white; margin-bottom: 30px">Our Deliverables</h2>
   <div class="deliverables-container">
     <div class="card">
       <div class="icon-circle"><img src="./image/Vector1.svg" width="70%" height="50%"></div>

@@ -122,21 +122,12 @@
     max-height: 350px;
   }
 
-  /*.video-wrapper video {
+  .video-wrapper video {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 8px;
-  }*/
-
-  .video-container {
-            position: relative;
-            width: 100%;
-            object-fit: cover;
-            max-width: 600px;  /* Adjust the max width of video */
-            margin: auto;      /* Center the container */
-        }
-
+  }
 
   .video-text {
     font-family: Inter ;
@@ -265,31 +256,7 @@
         max-width: 300px;
       }
     }
-       .play-button {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%); /* Center the button */
-            width: 80px; /* Button size */
-            height: 80px; /* Button size */
-            background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
-            border-radius: 50%; /* Circular button */
-            color: white;
-            font-size: 40px; /* Play icon size */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-            border: none;
-            z-index: 10; /* Ensure button is on top */
-            opacity: 0.8; /* Slight transparency */
-            transition: opacity 0.3s ease;
-        }
 
-        /* Hover effect for play button (optional) */
-        .play-button:hover {
-            opacity: 1; /* Fully visible when hovering */
-        }
   </style>
 </head>
 
@@ -326,26 +293,12 @@
   <!-- Video -->
  <!-- Video & Description Section -->
 <div class="video-container">
-
-  <div class="video-container">
-    <video id="video" controls preload="none" src="./video/video.mp4" type="video/mp4"></video>
-    <button class="play-button" id="playButton" onclick="playVideo()">&#9654;</button> <!-- Play icon using Unicode character -->
-</div>
-
- <!--  <div class="video-wrapper"> -->
-<!--     <video controls preload="none"
-  poster="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVQIW2NgYAAAAAMAAWgmWQ0AAAAASUVORK5CYII="
-  width="640" height="360">
-  <source src="./video/video.mp4" type="video/mp4">
-    <div class="play-button"></div> -->
-
-      <!-- <video id="myVideo" controls preload="none" >
-        <source src="./video/video.mp4" type="video/mp4">
-      <button class="play-button" id="playButton" onclick="playVideo()">&#9654;</button> 
-    Your browser does not support the video tag.
-  </video>
-  <div class="play-overlay"></div>
-  </div> -->
+  <div class="video-wrapper">
+    <video controls preload="none">
+      <source src="./video/video.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
 
   <!-- Text Content -->
   <div class="video-text">
@@ -400,19 +353,4 @@
   </section>
 
 </body>
-<script>
-    // Play video on button click
-    function playVideo() {
-        var video = document.getElementById('video');
-        var playButton = document.getElementById('playButton');
-        video.play();
-        playButton.style.display = 'none';  // Hide play button after video starts
-    }
-
-    // Display the play button by default
-    window.onload = function() {
-        var playButton = document.getElementById('playButton');
-        playButton.style.display = 'flex';
-    };
-</script>
 </html>
