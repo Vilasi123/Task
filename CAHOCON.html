@@ -113,19 +113,30 @@
     gap: 20px;
     align-items: stretch;
     padding: 20px;
+
   }
 
   .video-wrapper, .video-text {
     flex: 1;
-    min-width: 300px;
+    min-width: 250px;
+    max-height: 350px;
   }
 
-  .video-wrapper video {
+  /*.video-wrapper video {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 8px;
-  }
+  }*/
+
+  .video-container {
+            position: relative;
+            width: 100%;
+            object-fit: cover;
+            max-width: 600px;  /* Adjust the max width of video */
+            margin: auto;      /* Center the container */
+        }
+
 
   .video-text {
     font-family: Inter ;
@@ -135,6 +146,7 @@
     padding: 10px;
     background-color: #f9f9f9;
     border-radius: 8px;
+    max-height: 359px;
   }
 
   .button-container {
@@ -221,7 +233,7 @@
     .icon-circle {
       width: 50px;
       height: 50px;
-      background-color: #6633cc;
+      background-color: #9F509D;
       color: white;
       border-radius: 50%;
       display: flex;
@@ -253,13 +265,35 @@
         max-width: 300px;
       }
     }
+       .play-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); /* Center the button */
+            width: 80px; /* Button size */
+            height: 80px; /* Button size */
+            background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+            border-radius: 50%; /* Circular button */
+            color: white;
+            font-size: 40px; /* Play icon size */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            border: none;
+            z-index: 10; /* Ensure button is on top */
+            opacity: 0.8; /* Slight transparency */
+            transition: opacity 0.3s ease;
+        }
 
-
-
+        /* Hover effect for play button (optional) */
+        .play-button:hover {
+            opacity: 1; /* Fully visible when hovering */
+        }
   </style>
 </head>
 
-<body>
+<body style="margin: 0 3% 0 3%">
 
   <!-- Header -->
   <header class="site-header">
@@ -284,33 +318,44 @@
   <!-- Content -->
   <div class="container">
     <img src="./image/CAHOCONBlack1.png" alt="Conference Logo">
-    <h3>Enhancing Quality through Collaboration:
-</h3><h4> Transforming Healthcar Together</h4>
+    <h1>Enhancing Quality through Collaboration:
+</h1><h2> Transforming Healthcar Together</h2>
     <p class="para">11th, 12th-13th April, 2025 Hotel Pullman Aerocity New Delhi</p>
   </div>
 
   <!-- Video -->
  <!-- Video & Description Section -->
 <div class="video-container">
-  <div class="video-wrapper">
-    <video controls>
-      <source src="./video/video.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-  </div>
+
+  <div class="video-container">
+    <video id="video" controls preload="none" src="./video/video.mp4" type="video/mp4"></video>
+    <button class="play-button" id="playButton" onclick="playVideo()">&#9654;</button> <!-- Play icon using Unicode character -->
+</div>
+
+ <!--  <div class="video-wrapper"> -->
+<!--     <video controls preload="none"
+  poster="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVQIW2NgYAAAAAMAAWgmWQ0AAAAASUVORK5CYII="
+  width="640" height="360">
+  <source src="./video/video.mp4" type="video/mp4">
+    <div class="play-button"></div> -->
+
+      <!-- <video id="myVideo" controls preload="none" >
+        <source src="./video/video.mp4" type="video/mp4">
+      <button class="play-button" id="playButton" onclick="playVideo()">&#9654;</button> 
+    Your browser does not support the video tag.
+  </video>
+  <div class="play-overlay"></div>
+  </div> -->
 
   <!-- Text Content -->
   <div class="video-text">
-    
+
     <p>
       CAHOCON 2025 is set to be a landmark international conclave, hosted by the Consortium of Accredited Healthcare Organizations (CAHO) and endorsed by respected bodies such as ISQua, ASQua, and QCI.
-    </p>
-    <p>
       Themed <strong>"Enhancing Quality through Collaboration: Transforming Healthcare Together"</strong>, this year's event will spotlight the pivotal role of collaboration in driving progress across the healthcare landscape.
-    </p>
-    <p>
       The tagline, <em>"Collaboration: The heartbeat of progress"</em>, encapsulates the spirit of the event.
     </p>
+   <br>
     <p>
       Taking place on the <strong>12th and 13th of April 2025</strong> at the luxurious Hotel Pullman, Aerocity, New Delhi, the event will bring together distinguished healthcare leaders, professionals, researchers, and educators.
     </p>
@@ -324,13 +369,13 @@
     <h2>Our Deliverables</h2>
     <div class="deliverables-container">
       <div class="card">
-        <div class="icon-circle"><img src="./image/Vector.png" width="20px" height="20px"></div>
+        <div class="icon-circle"><img src="./image/Vector1.svg" width="70%" height="50%"></div>
         <h3>Event Theme & Branding</h3>
         <p>From the printing elements to the stage design, we developed a cohesive visual identity aligned with Carbocon’s mission.</p>
       </div>
       <div class="card">
         <div class="icon-circle">
-          <img src="./image/Vector1.png" width="20px" height="20px">
+          <img src="./image/Vector2.svg" width="70%" height="50%">
           
         </div>
 
@@ -339,14 +384,14 @@
       </div>
       <div class="card">
         <div class="icon-circle">
-          <img src="./image/Vector2.png" width="20px" height="20px">
+          <img src="./image/Vector3.svg" width="70%" height="50%">
         </div>
         <h3>Venue Setup & Technicals</h3>
         <p>Designed and executed a professional, tech-heavy setup with branding consistency, thematic elements, and on-site coordination.</p>
       </div>
       <div class="card">
         <div class="icon-circle">
-          <img src="./image/Vector3.png" width="20px" height="20px">
+          <img src="./image/Vector.svg" width="70%" height="50%">
         </div>
         <h3>Delegate Stay Arrangements</h3>
         <p>Booked and managed hotel stays for over [XX] attendees, including VIP and speaker categories, with personalized room allocations and seamless check-in coordination.</p>
@@ -354,8 +399,20 @@
     </div>
   </section>
 
-
-
-
 </body>
+<script>
+    // Play video on button click
+    function playVideo() {
+        var video = document.getElementById('video');
+        var playButton = document.getElementById('playButton');
+        video.play();
+        playButton.style.display = 'none';  // Hide play button after video starts
+    }
+
+    // Display the play button by default
+    window.onload = function() {
+        var playButton = document.getElementById('playButton');
+        playButton.style.display = 'flex';
+    };
+</script>
 </html>
